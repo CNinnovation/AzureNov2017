@@ -24,6 +24,7 @@ namespace ASPNETCoreSample
         {
             services.AddMvc();
             services.AddSingleton<IGreetingService, GreetingService>();
+            services.AddSingleton<IBooksService, BooksService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,11 +42,16 @@ namespace ASPNETCoreSample
 
             app.UseStaticFiles();
 
+            // app.UseMvcWithDefaultRoute();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(
+                    name: "calc",
+                    template: "{controller=Calc}/{action}/{x:int}/{y:int}");
             });
         }
     }
