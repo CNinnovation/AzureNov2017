@@ -30,7 +30,7 @@ namespace DISample
         private static void RegisterServices()
         {
             var services = new ServiceCollection();
-         //   services.AddSingleton<IGreetingService, GreetingService>();
+            services.AddSingleton<IGreetingService, GreetingService>();
             services.AddTransient<HomeController>();
             Container = services.BuildServiceProvider();
         }
