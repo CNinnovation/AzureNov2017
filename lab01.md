@@ -7,3 +7,6 @@
 3. Inject the service with the DI container
 4. Use the service from the `HomeController`
 
+Optional:
+
+Visual Studio - publish project to Azure App Service
