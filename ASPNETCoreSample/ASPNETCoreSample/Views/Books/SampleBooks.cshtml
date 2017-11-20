@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Book>
+@{
+    ViewData["Title"] = "SampleBooks";
+}
+
+<h2>SampleBooks</h2>
+
+<h3>@ViewBag.MyData</h3>
+
+
+<ul>
+@foreach (var book in Model)
+{
+    <li>@book.Title</li>
+}
+</ul>
