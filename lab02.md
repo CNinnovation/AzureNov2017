@@ -10,3 +10,5 @@
 ## Web Jobs
 
 1. Create a Web job, publish in Azure
+
+More information: [Web Jobs with Visual Studio](https://docs.microsoft.com/en-us/Azure/app-service/websites-dotnet-deploy-webjobs)
