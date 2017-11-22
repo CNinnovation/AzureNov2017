@@ -13,6 +13,8 @@ using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.ApplicationInsights.AspNetCore;
 using Microsoft.ApplicationInsights.Extensibility;
 using Microsoft.ApplicationInsights.SnapshotCollector;
+using BooksLib.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace MyAPISample
 {
@@ -47,10 +49,13 @@ namespace MyAPISample
 
             // Add SnapshotCollector telemetry processor.
             services.AddSingleton<ITelemetryProcessorFactory>(sp => new SnapshotCollectorTelemetryProcessorFactory(sp));
-
+            services.AddEntityFrameworkSqlServer()
+                .AddDbContext<BooksContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("BooksConnection")));
 
             services.AddMvc();
-            services.AddSingleton<IBooksService, BooksService>();
+            //  services.AddSingleton<IBooksService, BooksService>();
+            services.AddTransient<IBooksService, DbBooksService>();
             services.AddSwaggerGen(options =>
             {
                 options.SwaggerDoc("v1", new Info
@@ -67,6 +72,10 @@ namespace MyAPISample
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+           
+            //var context = app.ApplicationServices.GetService<BooksContext>();
+            //bool created = context.Database.EnsureCreated();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

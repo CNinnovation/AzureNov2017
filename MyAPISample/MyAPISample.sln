@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2009
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyAPISample", "MyAPISample\MyAPISample.csproj", "{EFBB8D39-2F22-4C93-A735-604310E6C41D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyAPISample", "MyAPISample\MyAPISample.csproj", "{EFBB8D39-2F22-4C93-A735-604310E6C41D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooksLib", "BooksLib\BooksLib.csproj", "{B0B4D555-48AF-4EF8-AA61-07D9CACEDCED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksLib", "BooksLib\BooksLib.csproj", "{B0B4D555-48AF-4EF8-AA61-07D9CACEDCED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BooksLib.Tests", "BooksLib.Tests\BooksLib.Tests.csproj", "{C6763CD2-8718-4FA9-96B1-E1CE58AB3DC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ManageDatabase", "ManageDatabase\ManageDatabase.csproj", "{9CD12968-BD99-4874-87B5-5EB354F416D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,12 @@ Global
 		{B0B4D555-48AF-4EF8-AA61-07D9CACEDCED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0B4D555-48AF-4EF8-AA61-07D9CACEDCED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0B4D555-48AF-4EF8-AA61-07D9CACEDCED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6763CD2-8718-4FA9-96B1-E1CE58AB3DC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6763CD2-8718-4FA9-96B1-E1CE58AB3DC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6763CD2-8718-4FA9-96B1-E1CE58AB3DC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CD12968-BD99-4874-87B5-5EB354F416D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CD12968-BD99-4874-87B5-5EB354F416D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CD12968-BD99-4874-87B5-5EB354F416D2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

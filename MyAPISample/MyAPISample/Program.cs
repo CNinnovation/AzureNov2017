@@ -19,6 +19,10 @@ namespace MyAPISample
 
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            //.ConfigureAppConfiguration(configure =>
+            //{
+            //    configure.AddUserSecrets("02b47dc0-d67b-4f5b-a4d9-b2d988981583");
+            //})
                 .UseStartup<Startup>()
                 .Build();
     }
