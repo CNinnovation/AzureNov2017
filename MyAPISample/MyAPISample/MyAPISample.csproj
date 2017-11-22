@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
+    <UserSecretsId>02b47dc0-d67b-4f5b-a4d9-b2d988981583</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -9,6 +10,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.2.0-beta1" />
+    <PackageReference Include="Microsoft.ApplicationInsights.SnapshotCollector" Version="1.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
   </ItemGroup>
