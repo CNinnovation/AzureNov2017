@@ -3,9 +3,10 @@ using BooksLib.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace BooksLib.Controllers
+namespace MyAPISample.Controllers
 {
     [Route("api/[controller]")]
     public class BooksController : Controller
@@ -15,7 +16,7 @@ namespace BooksLib.Controllers
         {
             _booksService = booksService;
         }
-       
+
         // GET api/values
         [HttpGet]
         public IEnumerable<Book> GetBooks()
